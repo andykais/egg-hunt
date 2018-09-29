@@ -1,13 +1,15 @@
 module.exports = {
+  pathPrefix: '/egg-hunt',
+
   plugins: [
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
-          include: /missing-icons/,
-        },
-      },
+          include: /missing-icons/
+        }
+      }
     },
     // {
     // resolve: 'gatsby-plugin-favicon',

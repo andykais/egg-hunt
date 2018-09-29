@@ -5,7 +5,7 @@
   "scripts": {
     "develop": "gatsby develop --open",
     "clean": "rm -rf .cache public",
-    "build": "gatsby build",
+    "build": "gatsby build --prefix-paths",
     "serve": "gatsby serve"
   },
   "dependencies": {
