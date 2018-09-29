@@ -6,6 +6,7 @@ import FileComments from '../components/file-comments'
 import findComments, { isParseable } from '../comment-finder'
 import commentFilters from '../comment-finder/comment-filters'
 import EggIcon from '../images/missing-icons/egg.svg'
+import { FaGithub } from 'react-icons/fa/index.mjs'
 
 import styles from './index.module.css'
 import './global-styles.css'
@@ -42,6 +43,7 @@ class GithubCommentsPage extends React.Component {
       const fileComments = {}
       for await (const object of repoClient.tree()) {
         tree.push(object)
+        if (!object.body && isParseable(object.path)) stats.numFiles++
         const stateTree = [...tree]
         this.setState({
           repoTree: stateTree,
@@ -51,7 +53,6 @@ class GithubCommentsPage extends React.Component {
       }
       for (const object of tree) {
         if (!object.body && isParseable(object.path)) {
-          stats.numFiles++
           const content = await repoClient.getFileContent(object)
           stats.numFilesLoaded++
           const comments = findComments({ filename: object.path, content })
@@ -115,6 +116,9 @@ class GithubCommentsPage extends React.Component {
             <div className={styles.header}>
               <h1>egg-hunt</h1>
               <EggIcon />
+              <a href="https://github.com/andykais/egg-hunt">
+                <FaGithub />
+              </a>
             </div>
             <div className={styles.children}>
               {isLoadingTree && (

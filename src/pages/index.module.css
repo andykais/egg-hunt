@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   background-color: whitesmoke;
+  overflow-y:auto;
 }
 .drawer,
 .header {
@@ -26,8 +27,15 @@
   background-color: steelblue;
   color: white;
   box-shadow: var(--box-shadow);
-  display: flex;
-  align-items: cemter;
+  display: grid;
+  grid-template-columns: auto auto 1fr;
+  align-items: center;
+}
+.header > a {
+  justify-self: flex-end;
+}
+.header > a:visited {
+  color: white;
 }
 .header > h1 {
   margin-right: 10px;

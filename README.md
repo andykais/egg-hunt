@@ -1,6 +1,3 @@
 # egg-hunt
 
-search 
-
-https://github.com/BlastarIndia/msword
-https://github.com/chrislgarry/Apollo-11/
+sift through github repo's comments to find interesting things
