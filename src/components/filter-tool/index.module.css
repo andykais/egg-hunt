@@ -1,0 +1,21 @@
+.form {
+  margin-top: 20px;
+}
+.form fieldset {
+  border: none;
+}
+
+.input {
+  margin: 10px 0;
+}
+.checkbox {
+  display: inline;
+}
+.checkboxLabel {
+  display: inline;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+}

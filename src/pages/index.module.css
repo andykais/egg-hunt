@@ -1,0 +1,41 @@
+.container {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+.verticalContainer {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+}
+.drawer,
+.header {
+  padding: 10px 15px;
+}
+.drawer {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  z-index: 99;
+  background-color: white;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.header {
+  background-color: steelblue;
+  color: white;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  align-items: cemter;
+}
+.header > h1 {
+  margin-right: 10px;
+}
+.children {
+  padding: 20px 0;
+  overflow-y: auto;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}

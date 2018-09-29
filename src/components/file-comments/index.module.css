@@ -1,0 +1,95 @@
+.emptyState {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  align-items: center;
+  color: grey;
+}
+.fileContainer {
+  flex-grow: 1;
+}
+.content {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  display: flex;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.title:hover {
+  background-color: lightgrey;
+}
+.link {
+  flex-grow: 1;
+}
+
+.downloading {
+  color: grey;
+}
+
+.downloading > h4 {
+  font-weight: normal;
+}
+
+.comments {
+  margin-left: 10px;
+  font-family: monospace;
+  color: white;
+  font-size: 16px;
+  /* display: grid; */
+  /* grid-template-columns: auto 1fr; */
+  /* grid-row-gap: 10px; */
+  /* align-items: center; */
+}
+
+.comment {
+  margin: 10px 0;
+  display: grid;
+  /* grid-row-gap: 10px; */
+  grid-template-columns: auto 1fr;
+  border-radius: 5px;
+}
+.lineLink {
+  text-align: right;
+  color: grey;
+  /* padding:0 10px; */
+  /* height: 100%; */
+  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.lineLink:first-child {
+  padding-top: 10px;
+  border-top-left-radius: 5px;
+}
+.lineLink:nth-last-child(2) {
+  padding-bottom: 10px;
+  border-bottom-left-radius: 5px;
+}
+.lineLink:hover {
+  color: lightgrey;
+}
+.lineLink > a {
+  display: block;
+  margin: 0 30px 0 0;
+  width: 35px;
+}
+.commentLine {
+  background-color: slategrey;
+  white-space: pre-wrap;
+
+  width: 100%;
+}
+.commentLine span {
+  margin: 0 10px 0 10px;
+}
+.commentLine:nth-child(2) {
+  padding-top: 10px;
+  border-top-right-radius: 5px;
+}
+.commentLine:nth-last-child(1) {
+  padding-bottom: 10px;
+  border-bottom-right-radius: 5px;
+}
